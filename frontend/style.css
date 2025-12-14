@@ -1,0 +1,72 @@
+:root{
+  --primary: #1e3a8a;
+  --accent: #3b82f6;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --surface: #f8fafc;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--surface);
+  color: #111827;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* NAVBAR */
+.main-nav {
+  background: linear-gradient(90deg, rgba(30,58,138,1), rgba(59,130,246,0.95));
+  color: white;
+}
+.navbar-brand { font-weight: 600; color: white; font-family: 'Poppins', sans-serif; font-size: 18px; }
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: white;
+  border-right: 1px solid rgba(15,23,42,0.04);
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-logo { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; }
+.sidebar .nav-link { color: #374151; padding: 10px 8px; margin-bottom: 6px; border-radius: 8px; display:flex; align-items:center; }
+.sidebar .nav-link.active { background: linear-gradient(90deg, rgba(59,130,246,0.08), rgba(30,58,138,0.04)); color: var(--primary); }
+
+/* MAIN CONTENT */
+.main-content { margin-left: 260px; padding: 28px; min-height: 100vh; }
+.card-box { border-radius: var(--radius); background: var(--card-bg); box-shadow: 0 6px 18px rgba(2,6,23,0.03); }
+.chart-card { border-radius: var(--radius); background: var(--card-bg); box-shadow: 0 6px 18px rgba(2,6,23,0.03); }
+
+/* STAT CARDS */
+.card-box h2, .card-box .h2 { font-weight: 700; color: #0b1320; }
+
+/* TABLE */
+.table thead th { background: linear-gradient(90deg, rgba(30,58,138,0.95), rgba(59,130,246,0.95)); color: white; border: 0; }
+.table tbody tr td { vertical-align: middle; }
+
+/* AUTH PAGE */ 
+.auth-bg { background: linear-gradient(180deg, rgba(250,250,253,1), rgba(245,249,255,1)); }
+.auth-card { width: 380px; border-radius: 12px; }
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .sidebar { display: none; position: relative; width: 100%; height: auto; }
+  .main-content { margin-left: 0; padding: 16px; }
+}
+
+/* ACCESSIBILITY HELPERS */
+small.text-muted { color: var(--muted) !important; }
+.badge { text-transform: capitalize; }
+
+/* small helpers */
+.small-muted { color: var(--muted); font-size: .92rem; }

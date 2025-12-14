@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-ai/php-ml": "*",
+        "nlp-tools/nlp-tools": "^0.1.3"
+    }
+}
